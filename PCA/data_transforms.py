@@ -14,7 +14,7 @@ def normalize(img_matrix, frac=0.6):
 		NumPy array of flattened image vectors
 
 	"""
-	# Below approach blowed up RAM usage.
+	# Below commented approach blowed up RAM usage.
 	# scaler = preprocessing.StandardScaler()
 	# scaler.fit(img_matrix)
 	# scaled_img_matrix = scaler.transform(img_matrix)
