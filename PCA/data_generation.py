@@ -3,7 +3,10 @@ import shutil
 
 import cv2
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
+
+from sklearn.model_selection import train_test_split
 
 
 DATASET_ROOT = "dataset_zurich/"
@@ -78,23 +81,32 @@ def create_data(img_size=100):
 	
 	Notes
 	-----
-	Takes ~55s to get data (shape = ((160000, 10000))), for example.
+	Takes ~30min to get data (shape = ((160000, 10000))), for example.
 	"""
 	# https://stackoverflow.com/questions/22392497/how-to-add-a-new-row-to-an-empty-numpy-array
 	total_num_examples = sum(num_examples().values())
-	data = np.empty((total_num_examples, img_size*img_size))
+	data = np.empty((0, size*size))
 	for class_ in os.listdir(NEW_DATASET_ROOT):
-		class_path = os.path.join(NEW_DATASET_ROOT, class_)
-		for i, image in enumerate(os.listdir(class_path)):
-			img = cv2.imread(os.path.join(class_path, image)).mean(axis=2)
-			img = resize(img)
-			img = img.flatten()
-			data[i] = img  # No need of any normalization here. Can use `normalize` function to do that.
-	return data
+	  class_path = os.path.join(NEW_DATASET_ROOT, class_)
+	  for image in os.listdir(class_path):
+	    img = cv2.imread(os.path.join(class_path, image)).mean(axis=2)
+	    img = resize(img)
+	    img = img.flatten()
+	    data = np.append(data, np.expand_dims(img, axis=0), axis=0)
+
+
+	##### GENERATE LABELS FOR CLASSIFICATION #####
+	sizes = num_examples()
+	merger_labels = np.repeat(0, sizes["merger"])
+	noninteracting_labels = np.repeat(1, sizes["noninteracting"])
+	labels = np.hstack([merger_labels, noninteracting_labels]) # First write merger labels and then noninteracting because while creating "data", the merger directory gets traversed first, and then noninteracting.
+	##### end #####
+
+	return data, labels  # Return the flattened image vectors (data) and the corresponding labels (labels)
 
 
 def dataset_to_numpy():
-	"""Save numpy binary files classwise.
+	"""Save numpy binary files of classwise images.
 
 	Notes
 	-----
@@ -109,6 +121,24 @@ def dataset_to_numpy():
 			images.append(np.array(img))
 		images = np.array(images)
 		np.save(f"{class_}.npy", images)
+
+
+def split_data(img_pcs, labels, frac=0.75):
+	"""Split data into training and testing sets.
+
+	img_pcs: The principal components obtained after PCA.
+		Corresponds to the first output of `apply_PCA` (i.e. image_pcs) function from data_transforms.py
+	labels: Associated labels for the data.
+		Corresponds to the second output of `create_data` (i.e. labels) function in this file.
+	frac: Fraction of the dataset used. Must be the same value as frac argument of `normalize` function in data_transforms.py
+	"""
+	X = pd.DataFrame(img_pcs)
+	y = pd.Series(labels)[:frac*len(X)]
+	X_train, X_test, y_train, y_test = train_test_split(
+		X, y, test_size = 0.3, shuffle=True, random_state=1
+	)  # shuffle=True is important since the data before splitting consists of all classes' examples together.
+
+	return X_train, X_test, y_train, y_test
 
 
 if __name__ == "__main__":
