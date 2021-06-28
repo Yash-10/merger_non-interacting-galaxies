@@ -46,7 +46,7 @@ def load_dataset():
 	for filename in os.listdir(src_test_noninteracting):
 	  shutil.move(os.path.join(src_test_noninteracting, filename), dest_noninteracting)
 
-	os.rmdir(DATASET_ROOT)  # TODO: Raises error if directory is not empty.
+	shutil.rmtree(DATASET_ROOT)
 
 
 def num_examples():
