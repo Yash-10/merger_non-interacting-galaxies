@@ -1,9 +1,18 @@
-Using PCA to project images and then using it for dimensionality reduction.
+# Principal Component Analysis (PCA)
 
-**Sample Images before and after PCA (using 512 components)**
-![PCA_before_after](images/pca_images.png)
+This section contains the analysis after applying PCA on the dataset. An `XGBoost` classifier was trained on the PCA components.
 
-`latest_latest_classification.ipynb` is done with 2048 PCA components on the whole dataset and takes around 45 min for fitting using `xgboost`. `latest_classification.ipynb` is done with 1024 components on the whole dataset with 1024 components and takes ~16-20 min for fitting.
+**Preprocessing**
 
-**Observations**
-- Increasing the components from 1024 to 2048 minutely decreases the accuracy (seen from the output in the respective notebooks) and using 2048 components even takes more than double the time taken by the 1024 approach. Hence, the best model is with using 1024 components, so far.
+- The images varied in size and all were resized to 100 X 100 giving a total of 10000 features for each image.
+- Using PCA, the number of components chosen was 1024 out of the maximum possible 10000. These 1024 components explained 92.76% variance of the whole dataset.
+- It was observed that increasing the no. of components (to explain 99% variance, for example) significantly increased the training time but did not yield gain in classification accuracy.
+- The reconstructed images after PCA (using the components) vs the original images in the dataset is shown below:
+
+![Reconstructed Images](images/pca_images.png)
+
+The files `data_generation.py` and `data_transforms.py` contains some helper functions and the `PCA.ipynb` notebook contains the whole implementation.
+
+**Results**
+
+Accuracy on the test set = 86.75%
