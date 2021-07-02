@@ -14,4 +14,4 @@ This section applies the transfer learning approach using the `Xception` archite
 
 Output of the forward pass has the format shown in `output_model_raw.txt`.
 
-The saved model from the notebook in this folder can be found ![here](https://drive.google.com/file/d/1x6SFqceZvOZrwHRPdJFVkOtjwS3ZM3LO/view?usp=sharing). It can be loaded (using eg: PyTorch) and can be used directly for inference.
+The saved model from the notebook in this folder can be found [here](https://drive.google.com/file/d/1x6SFqceZvOZrwHRPdJFVkOtjwS3ZM3LO/view?usp=sharing). It can be loaded (using eg: PyTorch) and can be used directly for inference.
