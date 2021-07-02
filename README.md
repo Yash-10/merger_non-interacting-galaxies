@@ -6,7 +6,7 @@
 | ----- | ----------------------- | -------------------- |
 | CNN | 94.05% | 0.94 |
 | XGBoost + PCA | 86.75% | 0.85 |
-| Transfer Learning (Xception) | 79.19% | 0.77 |
+| Transfer Learning (`Xception`) | 79.19% | 0.77 |
 
 **References**
 
