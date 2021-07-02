@@ -16,5 +16,3 @@
 - The saved model from the notebook in this folder can be found [here](https://drive.google.com/file/d/1x6SFqceZvOZrwHRPdJFVkOtjwS3ZM3LO/view?usp=sharing). It can be loaded (using eg: PyTorch) and can be used directly for inference.
 
 - The initial analysis included training the pre-trained `ResNet50` model which yielded 73.91% accuracy on the test set. For storage purposes, the relevant notebook (`resnet50.ipynb`) has been included.
-
-- Using `SGD + momentum` gave 74.13% accuracy on the test set whereas `Adam` optimizer yielded 77.44% test accuracy. This signifies that `Adam` is a better optimizer for loss convergence during training.
