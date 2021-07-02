@@ -16,3 +16,5 @@
 - The saved model from the notebook in this folder can be found [here](https://drive.google.com/file/d/1x6SFqceZvOZrwHRPdJFVkOtjwS3ZM3LO/view?usp=sharing). It can be loaded (using eg: PyTorch) and can be used directly for inference.
 
 - The initial analysis included training the pre-trained `ResNet50` model which yielded 73.91% accuracy on the test set. For storage purposes, the relevant notebook (`resnet50.ipynb`) has been included.
+
+- `SGD + momentum` optimizer (`momentum = 0.9`) gave slightly sub-optimal classification accuracy (74.13%) compared to when `Adam` optimizer was used (79.19%).
