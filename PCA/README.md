@@ -16,3 +16,5 @@ The files `data_generation.py` and `data_transforms.py` contains some helper fun
 **Results**
 
 Accuracy on the test set = 86.75%
+
+- The binary file `flattened_data.npy` (from the notebook) can be found [here](https://drive.google.com/file/d/1_qzSJy11tkK7wPTOsHM1WV1ket2KJRyE/view?usp=sharing)
