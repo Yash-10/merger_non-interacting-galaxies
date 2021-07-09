@@ -4,7 +4,7 @@
 
 | Model | Classification Accuracy | Area under ROC curve |
 | ----- | ----------------------- | -------------------- |
-| CNN | 94.40% | 0.94 |
+| CNN | 94.72% | 0.94 |
 | XGBoost + PCA | 86.75% | 0.85 |
 | Transfer Learning (`Xception`) | 79.19% | 0.77 |
 
