@@ -12,4 +12,4 @@ This section applies a seven layer convolutional network with four convolutional
 3. The file `CNN_downsample_2.ipynb` applies downsampling as a part of `transforms`, instead of applying it as a part of the model. This achieves 94.72% test accuracy. Although there is only a slight improvement compared to the results in `CNN_downsample.ipynb`, it implies ~50 images more are correctly classified.
 4. The file `CNN_only_conv_relu.ipynb` uses the approach of applying `conv-relu-dropout` (in that order) till the image size becomes 1X1 at the end. However, the test set accuracy could only reach ~84.24%.
 
-There is a hope of smart interpolators to help CNNs ignore "background" objects and learn patterns in merger and non-interacting galaxies.
+There is a hope to use smart interpolators to help CNNs ignore "background" objects and learn patterns in merger and non-interacting galaxies. However, over-preprocessing could confuse CNNs.
