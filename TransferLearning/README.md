@@ -18,3 +18,6 @@
 - The initial analysis included training the pre-trained `ResNet50` model which yielded 73.91% accuracy on the test set. For storage purposes, the relevant notebook (`resnet50.ipynb`) has been included.
 
 - `SGD + momentum` optimizer (`momentum = 0.9`) gave slightly sub-optimal classification accuracy (74.13%) compared to when `Adam` optimizer was used (79.19%) keeping the other network parameters and other hyperparameters unchanged.
+
+---
+The training and testing sets from the original dataset were combined and then splitted into new train and val folders using stratified sampling.
