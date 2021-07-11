@@ -13,3 +13,49 @@ This section applies a seven layer convolutional network with four convolutional
 4. The file `CNN_only_conv_relu.ipynb` uses the approach of applying `conv-relu-dropout` (in that order) till the image size becomes 1X1 at the end. However, the test set accuracy could only reach ~84.24%.
 
 There is a hope to use smart interpolators to help CNNs ignore "background" objects and learn patterns in merger and non-interacting galaxies. However, over-preprocessing could confuse CNNs.
+
+---
+
+The original dataset has the following structure:
+
+```
+DATASET_ROOT  
+│
+└───merger
+│   │-- training
+│   │-- test
+|   |-- validation
+│   
+└───noninteracting
+    │-- training
+    │-- test
+    |-- validation
+
+```
+which was changed to:
+
+```
+DATASET_ROOT
+|
+|
+└───train
+|      - merger
+|         <images>
+|      - noninteracting
+|         <images>
+|
+|
+└───val
+|      - merger
+|         <images>
+|      - noninteracting
+|         <images>
+|
+|
+└───test
+|      - merger
+|         <images>
+|      - noninteracting
+|         <images>
+ 
+ ```
