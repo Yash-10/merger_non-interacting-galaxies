@@ -19,3 +19,20 @@ Accuracy on the test set = 86.75%
 
 ---
 - The binary file `flattened_data.npy` (from the notebook) can be found [here](https://drive.google.com/file/d/1_qzSJy11tkK7wPTOsHM1WV1ket2KJRyE/view?usp=sharing)
+- For this (PCA) analysis, all the images were combined to have the following directory structure:
+
+  ```
+  data 
+  │
+  └───merger
+  │      img1
+  │      img2
+  |      ...
+  │   
+  └───noninteracting
+  |      img1
+  |      img2
+  |       ...
+  
+  ```
+  and were split into training and testing sets afterwards.
