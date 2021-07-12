@@ -59,3 +59,6 @@ DATASET_ROOT
 |         <images>
  
  ```
+ 
+ **Further Observations**
+ - Resizing the images to the same size (for example, 250X250) gives slightly lower classification accuracy and overall performance (92.47%) than center-cropping the images to a particular size (250X250).
