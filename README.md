@@ -6,6 +6,7 @@
 | ----- | ----------------------- | -------------------- |
 | CNN | 94.72% | 0.94 |
 | XGBoost + PCA | 86.75% | 0.85 |
+| Transfer Learning (`ResNet18_2`) | 96.25% | 0.96 |
 | Transfer Learning (`ResNet34`) | 94.75% | 0.95 |
 | Transfer Learning (`ResNet18`) | 92.89% | 0.93 |
 | Transfer Learning (`Xception`) | 79.19% | 0.77 |
