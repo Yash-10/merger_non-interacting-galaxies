@@ -9,6 +9,7 @@
 ---
 **ResNet**
 - `ResNet34` model gives 94.747% accuracy on the test set, slightly higher than `ResNet18` (92.89%). Both the models seemed to overfit quickly after the 15 epoch mark. Hence, the accuracy of these models on the test set might increase by a more rigourous early stopping approach.
+- Also, using the ResNet models showed sudden decrease in validation accuracy in one or two intermediate epochs.
 
 **Xception**
 - The saved model from the `TransferLearning.ipynb` notebook can be found [here](https://drive.google.com/file/d/1x6SFqceZvOZrwHRPdJFVkOtjwS3ZM3LO/view?usp=sharing). It can be loaded (using eg: PyTorch) and can be used directly for inference.
