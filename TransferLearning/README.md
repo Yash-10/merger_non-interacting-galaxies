@@ -9,7 +9,7 @@
 ---
 **ResNet**
 - `TL_ResNet18_better.ipynb` achieved a test accuracy of 96.25%. Two linear layers were added at the end.
-- `ResNet34` model gives 96.257% accuracy on the test set (TL_ResNet_better.ipynb), slightly higher than `ResNet18` (92.89%). Both the models seemed to overfit quickly after the 15 epoch mark. Hence, the accuracy of these models on the test set might increase by a more rigourous early stopping approach.
+- ResNet34 model gives 94.747% accuracy on the test set, slightly higher than ResNet18 (92.89%). Both the models seemed to overfit quickly after the 15 epoch mark. Hence, the accuracy of these models on the test set might increase by a more rigourous early stopping approach.
 - Also, using the ResNet models showed sudden decrease in validation accuracy in one or two intermediate epochs.
 
 **Xception**
