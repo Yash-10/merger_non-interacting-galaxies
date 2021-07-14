@@ -62,3 +62,4 @@ DATASET_ROOT
  
  **Further Observations**
  - Resizing the images to the same size (for example, 250X250) gives slightly lower classification accuracy and overall performance (92.47%) than center-cropping the images to a particular size (250X250).
+ - Even though the transfer learning approach achieved slightly higher classification accuracy, it suffers from instability in some of the initial epochs, seen as a very low validation accuracy for some epochs. Hence, the CNN model made from scratch might be prefered.
