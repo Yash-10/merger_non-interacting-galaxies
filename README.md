@@ -10,6 +10,7 @@
 | Transfer Learning (`ResNet34`) | 94.75% | 0.95 |
 | Transfer Learning (`ResNet18`) | 92.89% | 0.93 |
 | Transfer Learning (`Xception`) | 79.19% | 0.77 |
+| CNN Ensemble | 93.77 | 0.93 |
 
 **References**
 
