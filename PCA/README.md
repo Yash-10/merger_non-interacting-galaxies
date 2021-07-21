@@ -13,12 +13,6 @@ This section contains the analysis after applying PCA on the dataset. An `XGBoos
 
 The files `data_generation.py` and `data_transforms.py` contains some helper functions and the `PCA.ipynb` notebook contains the whole implementation.
 
----
-
-- The file `Simple+FFT+PCA.ipynb` applies several related techniques in one notebook. The best accuracy was obtained by using the classifier from `XGBoost` on the flattened images directly, without any PCA or FFT analysis.
-
----
-
 **Results**
 
 Accuracy on the test set = 86.75%
