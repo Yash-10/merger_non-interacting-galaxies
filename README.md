@@ -11,6 +11,7 @@
 | Transfer Learning (`ResNet18`) | 92.89% | 0.93 |
 | Transfer Learning (`Xception`) | 79.19% | 0.77 |
 | CNN Ensemble | 93.77% | 0.93 |
+| XGBoost | 89.12% | 0.95 |
 
 Some statistics of the best model (`Resnet18_2`) are <sup>1</sup>:
 
