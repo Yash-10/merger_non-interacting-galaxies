@@ -13,6 +13,7 @@
 | CNN Ensemble | 93.77% | 0.93 |
 | XGBoost | 89.12% | 0.95 |
 | FFT+XGBoost | 83.79% | <not_yet_calc> |
+| SMOTE resampling | 89.29% | 0.95 |
 
 Some statistics of the best model (`Resnet18_2`) are <sup>1</sup>:
 
