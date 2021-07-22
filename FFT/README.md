@@ -16,5 +16,5 @@
 The real and imaginary parts of the 2D FFT of the images were column stacked to generate the input FFT features for classification.
 
 
-**Prediction Probabilities**
+**Prediction Probabilities (from the best model in this directory)**
 ![Prediction Probability Plot](images/pred_probs.png)
