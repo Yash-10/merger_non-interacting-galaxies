@@ -8,7 +8,7 @@
 - The 1D power spectrums were normalized and used as features for classification. The best test set accuracy achieved was 73.125% using ```"learning_rate": 0.01, "n_estimators": 1000, "reg_lambda": 1e-04, "max_depth": 12```.
 
 - The file `Simple+FFT+PCA.ipynb` applies several related techniques in one notebook. The best accuracy was obtained by using the classifier from `XGBoost` on the flattened images directly, without any PCA or FFT analysis.
-- The notebook `SMOTE.ipynb` uses SMOTE resampling to oversample the merger class and undersamples the non-interacting instances to generate a balanced dataset.
+- The notebook `SMOTE.ipynb` uses SMOTE resampling to oversample the merger class and undersamples the non-interacting instances to generate a balanced dataset. The default `k_neighbors` value of 5 gave the best performance whereas increasing the `k` value didn't improve the performance.
 
 
 **Calculation of FFT features**
